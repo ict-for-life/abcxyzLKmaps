@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
+ <?php 
+ include 'html/menu.html';
+ 
+ 
+ ?>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Hiiiuyugitougiyii</title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
+<head>
+<script>
+
+document.getElementById("menuCss").href="css/menu.css";
+</script>
+
+
+</head>
+
+
+<body >
+
+ 
+</body>
+
 </html>
