@@ -1,6 +1,6 @@
 
  <?php 
- include 'html/menu.html';
+ include 'html/menu.php';
  
  
  ?>

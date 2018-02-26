@@ -1,8 +1,31 @@
 <!DOCTYPE html>
+
+<?php 
+
+session_start();
+
+$user_name='User';
+$user_img='images/user.png';
+if ($_SESSION["uname"]!="") {
+    $user_name=$_SESSION["uname"];
+}
+if ($_SESSION["uimg"]!="") {
+   $user_img=$_SESSION["uimg"];
+}
+
+
+
+
+
+?>
+
 <html>
+        
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
 <style>
 body {
     font-family: "Lato", sans-serif;
@@ -161,7 +184,7 @@ body {
 .user_name{
 	position: absolute;
 	top:20px;
-	left:-20px;
+	left:-80px;
 
 }
 .dropbtn {
@@ -238,7 +261,7 @@ body {
 <div id="us" class="user"> 
 
 
-<div class="user_name"><h4> User </h4></div>
+    <div class="user_name"><h4 id="menu_uname"> <?php echo $user_name;  ?></h4></div>
 
 <!--div> <img src="user.png" class="user_img"> </div--> 
 
@@ -246,7 +269,7 @@ body {
 
 <div class="dropdown">
   
-  <img src="images/user.png" class="user_img" onclick="drop()"> 
+    <img id="menu_user_img" src="<?php echo $user_img;?>" class="user_img" onclick="drop()"> 
   <div id="Dpdown" class="dropdown-content">
   <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
   <a href="#"><span class="glyphicon glyphicon-lock"></span> Logout</a>
