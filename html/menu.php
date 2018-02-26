@@ -6,11 +6,11 @@ session_start();
 
 $user_name='User';
 $user_img='images/user.png';
-if ($_SESSION["uname"]!="") {
-    $user_name=$_SESSION["uname"];
+if ($_SESSION["u_fname"]!="") {
+    $user_name=$_SESSION["u_fname"];
 }
-if ($_SESSION["uimg"]!="") {
-   $user_img=$_SESSION["uimg"];
+if ($_SESSION["u_img"]!="") {
+   $user_img=$_SESSION["u_img"];
 }
 
 

@@ -12,40 +12,39 @@ global $connection;
 
 session_start();
 
-$userName = $_POST['uname'];
-$userPw = $_POST['pw'];
+$userName = $_GET['uname'];
+$userPw = $_GET['pw'];
 
 
 
-$sqlForLogin = "SELECT * FROM user WHERE user_name='" . $userName . "' AND user_password='" . $userPw . "' AND user_status='Active'";
+$sqlForLogin = "SELECT * FROM user WHERE user_uname='" . $userName . "' AND user_password='" . $userPw . "' AND user_status='Active'";
 
 
 $result = mysqli_query($connection, $sqlForLogin);
 
 
+
 if (mysqli_num_rows($result) > 0) {
 
-    if ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($result)) {
 
-        $_SESSION["u_id"] = $row["idtb_user_account"];
-        $_SESSION["u_fname"] = $row["idtb_user_account"];
-        $_SESSION["u_lname"] = $row["idtb_user_account"];
-        $_SESSION["u_uname"] = $row["idtb_user_account"];
-        $_SESSION["u_img"] = $row["idtb_user_account"];
-        $_SESSION["u_pno"] = $row["idtb_user_account"];
-        $_SESSION["u_email"] = $row["idtb_user_account"];
-        $_SESSION["u_state"] = $row["idtb_user_account"];
+        $_SESSION["u_id"] = $row["iduser"];
+        $_SESSION["u_fname"] = $row["user_fname"];
+        $_SESSION["u_lname"] = $row["user_lname"];
+        $_SESSION["u_uname"] = $row["user_uname"];
+        $_SESSION["u_img"] = $row["user_img_path"];
+        $_SESSION["u_pno"] = $row["user_pno"];
+        $_SESSION["u_email"] = $row["user_email"];
+        $_SESSION["u_state"] = $row["user_state"];
 
-        header('Location: ../index.php');
-    } else {
-        
-    }
+        echo 'ok';
+ 
+    } 
 } else {
 
-    echo 'alert("Invalide Username Or Password")';
-    header('Location: ../login.html');
+    echo 'Invalide Username Or Password';
     
 }
 
 
-mysqli_close($con);
+mysqli_close($connection);
