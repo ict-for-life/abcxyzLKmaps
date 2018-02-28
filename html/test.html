@@ -1,0 +1,93 @@
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            
+ .user {
+    position: absolute;
+    top:10px;
+    right:10px;
+    background-color: #ffffff;
+    height:80px;
+    min-width: 222px;
+    paddind:30px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.map {
+    position: absolute;
+    top:70px;
+    right:10px;
+    background-color: #f1f1f1;
+    height:400px;
+    width:500px;
+    min-width: 222px;
+    paddind:30px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top:85px;
+    right:-3px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    paddind:30px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+	
+	
+.show {display:block;}
+
+.user_img {
+    border: none;
+    padding: 5px;
+    width: 60px;
+    border-radius: 50%;
+    
+
+}       
+        
+    
+</style>
+           
+        
+    </head>
+    <body>
+        <div class="user">
+            <table align="right">
+                <tr>
+                    <td> User </td>
+                    <td>
+                        <img id="menu_user_img" src="../images/user.png"  onclick="drop()"class="user_img"> 
+                        <div id="Dpdown" class="dropdown-content">
+                        <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
+                        <a href="#"><span class="glyphicon glyphicon-lock"></span> Logout</a>
+                        </div>
+                    
+                    </td>
+                </tr>
+            </table>
+        </div> 
+        <div class="map">Map Here</div>
+        
+        
+        </body>
+</html>
