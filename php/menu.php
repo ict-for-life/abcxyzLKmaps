@@ -3,11 +3,16 @@
 <?php
 $user_name = 'User';
 $user_img = 'images/user.png';
+$user_position = 'Position - Place';
+
 if ($_SESSION["u_fname"] != "") {
     $user_name = $_SESSION["u_fname"];
 }
 if ($_SESSION["u_img"] != "") {
     $user_img = $_SESSION["u_img"];
+}
+if ($_SESSION["u_roll"] != "") {
+    $user_position = $_SESSION["u_roll"]." - ".$_SESSION["u_state"];
 }
 ?>
 
@@ -257,7 +262,7 @@ if ($_SESSION["u_img"] != "") {
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><h5>Position - Place</h5> </td>
+                    <td colspan="2"><h5 id="menu_position"><?php echo $user_position; ?></h5> </td>
                 </tr>
             </table>
         </div>
