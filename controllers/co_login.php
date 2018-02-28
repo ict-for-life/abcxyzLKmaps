@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION["u_email"] = $row["user_email"];
         $_SESSION["u_state"] = $row["user_state"];
 
-        echo 'ok id='. $_SESSION["u_id"];
+        echo 'ok';
  
     } 
 } else {
