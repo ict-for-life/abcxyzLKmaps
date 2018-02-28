@@ -2,7 +2,7 @@
  <?php 
 session_start();
 //session_destroy();
- if (isset($_SESSION["u_id"])&&$_SESSION["u_id"]!="") {  include 'html/menu.php';?>
+ if (isset($_SESSION["u_id"])&&$_SESSION["u_id"]!=NULL) {  include 'html/menu.php';?>
    
 <html>
 <head>
