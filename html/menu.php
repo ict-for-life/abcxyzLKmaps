@@ -2,7 +2,7 @@
 
 <?php 
 
-session_start();
+
 
 $user_name='User';
 $user_img='images/user.png';

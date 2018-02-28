@@ -10,7 +10,7 @@ require_once "../DB/connection.php";
 
 global $connection;
 
-session_start();
+
 
 $userName = $_GET['uname'];
 $userPw = $_GET['pw'];
@@ -28,6 +28,8 @@ if (mysqli_num_rows($result) > 0) {
 
     while ($row = mysqli_fetch_assoc($result)) {
 
+        session_start();
+        
         $_SESSION["u_id"] = $row["iduser"];
         $_SESSION["u_fname"] = $row["user_fname"];
         $_SESSION["u_lname"] = $row["user_lname"];
@@ -37,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION["u_email"] = $row["user_email"];
         $_SESSION["u_state"] = $row["user_state"];
 
-        echo 'ok';
+        echo 'ok id='. $_SESSION["u_id"];
  
     } 
 } else {
