@@ -11,7 +11,7 @@
     top:10px;
     right:10px;
     background-color: #ffffff;
-    height:80px;
+    height:100px;
     min-width: 222px;
     paddind:30px;
     overflow: auto;
@@ -20,11 +20,48 @@
 
 .map {
     position: absolute;
-    top:70px;
+    top:120px;
     right:10px;
     background-color: #f1f1f1;
-    height:400px;
-    width:500px;
+    height:70%;
+    width:45%;
+    min-width: 222px;
+    paddind:30px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.recent {
+    position: absolute;
+    top:120px;
+    left:10px;
+    background-color: #f1f1f1;
+    height:35%;
+    width:45%;
+    min-width: 222px;
+    paddind:30px;
+    overflow: auto;
+    z-index: 1;
+}
+.main {
+    position: absolute;
+    top:120px;
+    left:20px;
+    background-color: #f1f1f1;
+    height:70%;
+    width:95%;
+    min-width: 222px;
+    paddind:30px;
+    overflow: auto;
+    z-index: 1;
+}
+.other {
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    background-color: #f1f1f1;
+    height:35%;
+    width:45%;
     min-width: 222px;
     paddind:30px;
     overflow: auto;
@@ -74,9 +111,9 @@
         <div class="user">
             <table align="right">
                 <tr>
-                    <td> User </td>
+                    <td> <h4>User</h4> </td>
                     <td>
-                        <img id="menu_user_img" src="../images/user.png"  onclick="drop()"class="user_img"> 
+                        <img id="menu_user_img" src="../images/user.png"  onclick="drop()" class="user_img"> 
                         <div id="Dpdown" class="dropdown-content">
                         <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
                         <a href="#"><span class="glyphicon glyphicon-lock"></span> Logout</a>
@@ -84,9 +121,15 @@
                     
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2"><h5>Position - Place</h5> </td>
+                </tr>
             </table>
         </div> 
-        <div class="map">Map Here</div>
+        <div class="main">
+            
+            Content here
+        </div>
         
         
         </body>

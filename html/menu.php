@@ -147,16 +147,15 @@ if ($_SESSION["u_img"] != "") {
 
 
             .user {
-                background-color: #FFFFFF;
-                border: none;
-                color: #000000;
-                text-align: center;
-                font-size: 28px;
-                padding:30px;
-                width: 100px;
                 position: absolute;
                 top:10px;
                 right:10px;
+                background-color: #ffffff;
+                height:100px;
+                min-width: 222px;
+                paddind:30px;
+                overflow: auto;
+                z-index: 1;
             }
 
             .user_img {
@@ -164,9 +163,7 @@ if ($_SESSION["u_img"] != "") {
                 padding: 5px;
                 width: 60px;
                 border-radius: 50%;
-                position: absolute;
-                top:10px;
-                right:10px;
+                
             }
 
             .user_img:hover {
@@ -202,7 +199,7 @@ if ($_SESSION["u_img"] != "") {
             .dropdown-content {
                 display: none;
                 position: absolute;
-                top:85px;
+                top:100px;
                 right:-3px;
                 background-color: #f1f1f1;
                 min-width: 160px;
@@ -250,26 +247,25 @@ if ($_SESSION["u_img"] != "") {
 
 
 
-        <div id="us" class="user"> 
-
-
-            <div class="user_name"><h4 id="menu_uname"> <?php echo $user_name; ?></h4></div>
-
-<!--div> <img src="user.png" class="user_img"> </div--> 
-
+        
+        <div class="user">
+            <table align="right">
+                <tr>
+                    <td> <h4 id="menu_uname"><?php echo $user_name; ?></h4> </td>
+                    <td>
+                        <img id="menu_user_img" src="<?php echo $user_img; ?>"  onclick="drop()" class="user_img"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Position - Place</h5> </td>
+                </tr>
+            </table>
         </div>
-
-        <div class="dropdown">
-
-            <img id="menu_user_img" src="<?php echo $user_img; ?>" class="user_img" onclick="drop()"> 
-            <div id="Dpdown" class="dropdown-content">
-                <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
-                <a href="#" onclick="logout()"><span class="glyphicon glyphicon-lock"></span> Logout</a>
-
-            </div>
-
-        </div>
-
+        <div id="Dpdown" class="dropdown-content">
+                        <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
+                        <a href="#" onclick="logout()"><span class="glyphicon glyphicon-lock"></span> Logout</a>
+                        </div>
+        
         <div id="sub_properties" class="sidenav_sub"> 
             <a href="#"> <span class="glyphicon glyphicon-stop"> Registered Propertiesties </span></a>
             <a href="#"> <span class="glyphicon glyphicon-stop"> LA Owned Propertiesties </span></a>
