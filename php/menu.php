@@ -101,6 +101,7 @@ if ($_SESSION["u_roll"] != "") {
                 position: absolute;
                 top:43%;
                 left:-23px;
+                z-index: 1;
 
             }
             .menu_btn_after{
@@ -109,6 +110,7 @@ if ($_SESSION["u_roll"] != "") {
                 right:79%;
                 visibility:hidden;
                 transition:0.5s;
+                z-index: 1;
             }
 
 
@@ -205,7 +207,7 @@ if ($_SESSION["u_roll"] != "") {
                 display: none;
                 position: absolute;
                 top:100px;
-                right:-3px;
+                right:10px;
                 background-color: #f1f1f1;
                 min-width: 160px;
                 paddind:30px;
@@ -221,7 +223,9 @@ if ($_SESSION["u_roll"] != "") {
                 display: block;
             }
 
-            .dropdown a:hover {background-color: #ddd}
+            .dropdown-content a:hover {
+                background-color: #E0E0E0;
+            }
 
 
             .show {display:block;}	
@@ -267,9 +271,9 @@ if ($_SESSION["u_roll"] != "") {
             </table>
         </div>
         <div id="Dpdown" class="dropdown-content">
-                        <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
-                        <a href="#" onclick="logout()"><span class="glyphicon glyphicon-lock"></span> Logout</a>
-                        </div>
+        <a href="#"><span class="glyphicon glyphicon-cog"></span> Edit Account </a>
+         <a href="#" onclick="logout()"><span class="glyphicon glyphicon-lock"></span> Logout</a>
+        </div>
         
         <div id="sub_properties" class="sidenav_sub"> 
             <a href="#"> <span class="glyphicon glyphicon-stop"> Registered Propertiesties </span></a>
