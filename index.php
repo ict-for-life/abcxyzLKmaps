@@ -17,7 +17,7 @@ document.getElementById("menuCss").href="css/menu.css";
 
 <body >
 <?php
-    include 'html/profile.html';
+    include 'php/profile.php';
 ?>
  
 </body>
