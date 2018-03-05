@@ -1,19 +1,4 @@
-<?php
-session_start();
-$user_name = 'User';
-$user_img = 'images/user.png';
-$user_position = 'Position - Place';
 
-if ($_SESSION["u_fname"] != "") {
-    $user_name = $_SESSION["u_fname"];
-}
-if ($_SESSION["u_img"] != "") {
-    $user_img = $_SESSION["u_img"];
-}
-if ($_SESSION["u_roll"] != "") {
-    $user_position = $_SESSION["u_roll"] . " - " . $_SESSION["u_state"];
-}
-?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -25,8 +10,7 @@ if ($_SESSION["u_roll"] != "") {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/vendor.css">
-        
-        <link rel="stylesheet" href="css/app-blue.css">
+        <link rel="stylesheet" id="theme-style" href="css/app-blue.css">
         <!-- Theme initialization -->
 
 
@@ -178,7 +162,6 @@ if ($_SESSION["u_roll"] != "") {
                 border-radius: 50%;
 
             }
-            
         </style>
         <script>
             $(window).click();
@@ -191,19 +174,22 @@ if ($_SESSION["u_roll"] != "") {
                 <header class="header" id="top">
 
                     <div class="header-block header-block-collapse">
-                        <span style="font-size:20px;cursor:pointer;color:#000000; " onclick="Nav()">&#9776; Menu</span>
+                        <span style="font-size:20px;cursor:pointer;color:#000000; hover {color:#014682;}  " onclick="Nav()">&#9776; Menu</span>
                     </div>
-                     <div style="position:absolute;left:50%;top:50%;height:50px;width:200px;margin-left:-100px;margin-top: -25px; " >
-                        <center>  <span style="font-size:13px;cursor:pointer;color:#000000;"> <?php echo $user_position; ?></span> </center>
+                    <div style="position:absolute;left:50%;top:50%;height:50px;width:300px;margin-left:-50px;margin-top: -25px; " >
+                        <center>  <span style="font-size:20px;cursor:pointer;color:#000000;"> Position - Place</span> </center>
                     </div>
+
                     <div class="header-block header-block-nav">
                         <ul class="nav-profile">
 
                             <li class="profile dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <img src="<?php echo $user_img; ?>" class="user_img"> <span class="name">
-                                        <?php echo $user_name; ?>
-                                    </span> </a>
+                                    <img class=user_img src='images/no.jpg'>
+                                   
+                                        <span class="name">
+                                        <h5>John Doe</h5>
+                                </span> </a>
                                 <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1"> 
                                     <a class="dropdown-item" href="#">
                                         <i class="fa fa-gear icon"></i>
@@ -223,53 +209,53 @@ if ($_SESSION["u_roll"] != "") {
 
                             <nav class="menu">
                                 <ul class="nav metismenu" id="sidebar-menu">
-                                    <li id="NameDash"> <a href="#" onclick="Odash()">
+                                    <li class='active'> <a href="#">
                                             <i class="fa fa-tachometer"></i> Dashboard
                                         </a> </li>
-                                    <li> <a href="">
+                                    <li> <a >
                                             <i class="fa fa-home"></i> Properties
                                             <i class="fa arrow"></i>
                                         </a>
                                         <ul>
-                                            <li id="rp"> <a href="#" onclick="ORP()">
+                                            <li> <a href="#">
                                                     Registered Properties
                                                 </a> </li>
-                                            <li> <a href="#" onclick="OLAP()">
+                                            <li> <a href="#">
                                                     LA Owned Properties 
                                                 </a> </li>
-                                            <li> <a href="#" onclick="OUP()">
+                                            <li> <a href="#">
                                                     Unregistered Properties 
                                                 </a> </li>
                                         </ul>
                                     </li>
-                                    <li> <a href="#" onclick="Oroads()">
+                                    <li> <a href="#">
                                             <i class="fa fa-road"></i> Roads
 
                                         </a>
 
                                     </li>
                                     <li> <a href="#">
-                                            <i class="fa fa-cogs" onclick="OM()"></i> Maintains
+                                            <i class="fa fa-cogs"></i> Maintains
 
                                         </a>
 
                                     </li>
-                                    <li> <a href="#" onclick="ODW()">
+                                    <li> <a href="#">
                                             <i class="fa fa-legal"></i> Development Works
                                         </a> </li>
                                     <li> <a href="#">
-                                            <i class="fa fa-desktop" onclick="OAB()"></i> Advertisement Board
+                                            <i class="fa fa-desktop"></i> Advertisement Board
                                         </a>
 
                                     </li>
                                     <li> <a href="#">
-                                            <i class="fa fa-map-marker" onclick="Omap()"></i> &nbspMap View
+                                            <i class="fa fa-map-marker"></i> &nbspMap View
 
                                         </a>
 
                                     </li>
                                     <li> <a href="#">
-                                            <i class="fa fa-bar-chart-o" onclick="OR()"></i> Reports
+                                            <i class="fa fa-bar-chart-o"></i> Reports
                                         </a> </li>
                                     <li> <a href="#">
                                             <i class="fa fa-puzzle-piece"></i> Master Data
@@ -281,66 +267,12 @@ if ($_SESSION["u_roll"] != "") {
                             </nav>
 
                         </div>
-                        <script id="menuLoader">
-                            function Odash(){
-                                $('#loader').load('php/Dashboard.php');
-                                document.getElementById('NameDash').class = 'active';
-                                
-                            }
-                            function ORP(){
-                                $('#loader').load('html/Rproperties.html');
-                                document.getElementById("rp").class = "active"
-                                
-                            }
-                            function OLAP(){
-                                $('#loader').load('html/LAproperties.html');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function OUP(){
-                                $('#loader').load('html/Uproperties.html');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function Oroads(){
-                                $('#loader').load('html/Roads.html');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function OM(){
-                                $('#loader').load('html/Maintenance.html');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function ODW(){
-                                $('#loader').load('html/Dwork.html');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function OAB(){
-                                $('#loader').load('html/Aboard.html');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function Omao(){
-                                $('#loader').load('php/Map.php');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            function OR(){
-                                $('#loader').load('php/Reports.php');
-                                //document.getElementById("rp").class = "active"
-                                
-                            }
-                            
-                        
-                        </script>
                         <footer class="sidebar-footer">
 
                         </footer>
                 </aside>
                 <div class="sidebar-overlay" id="sidebar-overlay"></div>
-                <article class="content dashboard-page" id="loader">
+                <article class="content dashboard-page" id='loader'>
 
 
                 </article>
@@ -381,6 +313,14 @@ if ($_SESSION["u_roll"] != "") {
                                 //document.getElementById("main").style.marginLeft = "0";
                             }
         </script>
+        
+        
+        <script> 
+            
+        
+        </script>
     </body>
 
-</html>
+</html>  
+
+
