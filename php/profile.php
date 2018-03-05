@@ -1,5 +1,8 @@
 
 <?php
+
+session_start();
+
 $user_name = $_SESSION["u_uname"];
 $user_img = '../images/no.jpg';
 $fname = $_SESSION["u_fname"];
@@ -31,12 +34,12 @@ if ($_SESSION["u_img"] != "") {
                 left: 50%;
                 width:60%;
                 height:80%;
-                margin-top: -20em; /*set to a negative number 1/2 of your height*/
-                margin-left: -30em; 
+                margin: 0 auto;
                 background-color: #F5F5F5;
                 overflow-x: visible;
                 transition: 0.5s;
-                padding-top: 20px;        
+                padding-top: 20px; 
+                
             }
 
             /*.prof_main table{
@@ -129,11 +132,12 @@ if ($_SESSION["u_img"] != "") {
                 document.getElementById("profile_image").src = "<?php echo $user_img; ?>";
 
             }
-
+            
+           
         </script>
     </head>
     <body>
-        <div class="prof_main">
+        <div class="h-100 row align-items-center" >
             <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
                 <table align="center" width="80%" height="100%">
                     <tr>
@@ -168,8 +172,8 @@ if ($_SESSION["u_img"] != "") {
 
 
                             <div class="col-xs-12">
-                                <div class="col-xs-6"><a href="#" class="btn btn-warning" id="pass" >Change Password</a></div>
-                                <div class="col-xs-6">   <input type="submit" class="btn btn-primary" value="Update" class="submit" /> </div>
+                                <div class="col-xs-6"><a href="#" class="btn btn-danger pull-left" id="pass" >Change Password</a></div>
+                                <div class="col-xs-6">   <input type="submit" class="btn btn-primary pull-right" value="Update" class="submit" /> </div>
 
 
                             </div>
