@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="panel-group col-lg-12" id="accordion" role="tablist" aria-multiselectable="true">
+                <form action="http://45.76.177.205/dev_works/add_post" accept-charset="utf-8" role="form" method="post" id="add_dev_work_frm" enctype="multipart/form-data"><div style="display:none">
+                        <input type="hidden" name="csrf_test_name" value="8274ee505099c122610670616c34a052" />
+                    </div>                <input type="hidden" name="user_lat" id="user_lat">
+                    <input type="hidden" name="user_lng" id="user_lng">
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Development Work Details
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="row">       
+                                    <div class="form-group col-lg-6">
+                                        <label>Project Name</label> 
+                                        <input type="text" name="prj_name" id="prj_name" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Project ID</label> <span class="required">*</span>
+                                        <input type="text" name="prj_id" id="prj_id" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Project Funding Type</label>
+                                        <select name="prj_type" id="prj_type" class="form-control">
+                                            <option value="">N/A</option>
+
+                                            <option value="1">LA budget</option>
+
+                                            <option value="2">NELSIP</option>
+
+                                            <option value="3">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Development Work Type</label>
+                                        <select name="dev_work_type[]" id="dev_work_type" class="form-control chosen-select" multiple="" data-placeholder="--Please Select--" autocomplete="off">
+                                            <option value="">N/A</option>
+
+                                            <option value="1">Buildings</option>
+
+                                            <option value="7">Cemetery</option>
+
+                                            <option value="3">Culverts</option>
+
+                                            <option value="5">Library</option>
+
+                                            <option value="4">Playgrounds/park</option>
+
+                                            <option value="2">Storm water drainage</option>
+
+                                            <option value="6">SWM</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Value of Work(Rs in Millions)</label>
+                                        <input type="text" name="value" id="value" class="form-control">
+                                    </div>
+
+                                    <div class="form-group col-lg-6">
+                                        <label>Proposed Period: Start Date</label>
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" id="start_dt" name="start_dt">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Proposed Period: End Date</label>
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" id="end_dt" name="end_dt">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>     
+                                    </div>
+                                    <div class="form-group col-lg-4 ">
+                                        <label>Map View</label>
+                                        <button type="button" class="btn btn-warning form-control" data-toggle="modal" data-target="#asset_map_modal">Set Location</button>
+
+
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                        <label>Latitude</label>
+                                        <input type="text" name="lat" id="lat" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                        <label>Longitude</label>
+                                        <input type="text" name="lng" id="lng" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Ward</label>
+                                        <select name="ward_list" id="ward_list" class="form-control">
+                                            <option value="">--Please Select--</option>
+
+                                            <option value="1">Ward 01 Wewala west</option>
+
+                                            <option value="4">WARD1</option>
+
+                                            <option value="5">WARD2</option>
+
+                                            <option value="3">WARD 3</option>
+
+                                            <option value="2">WARD 4</option>
+
+                                            <option value="6">WARD 5</option>
+
+                                            <option value="7">WARD 6</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>GN Division</label>
+                                        <select name="gn_list" id="gn_list" class="form-control">
+                                            <option value="">--Please Select--</option>
+
+                                            <option value="8">Aluthwatta 576</option>
+
+                                            <option value="9">Aluthwatta 576A</option>
+
+                                            <option value="4">Karavita</option>
+
+                                            <option value="3">Kokkavila</option>
+
+                                            <option value="2">Pitipana East</option>
+
+                                            <option value="7">Wewala East 562</option>
+
+                                            <option value="1">Wewala West</option>
+
+                                            <option value="6">Wewala West 562 B</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> 
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    Monitoring Status Details
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-lg-12">
+                                        <small>Current Status, Current Date and Monitoring fields are required to be filled to add status.</small>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Current Status</label>
+                                        <select name="cur_st" id="cur_st" class="form-control" autocomplete="off">
+                                            <option value="">N/A</option>
+                                            <option value="1">Proposed</option>
+                                            <option value="2">Ongoing</option>
+                                            <option value="3">Completed</option>
+                                            <option value="4">Abandoned</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Current Date</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="cur_date" name="cur_date">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Monitoring</label>
+                                        <select name="monitoring" id="monitoring" class="form-control" autocomplete="off">
+                                            <option value="">N/A</option>
+                                            <option value="1">Not yet started</option>
+                                            <option value="2">Ontime</option>
+                                            <option value="3">Exceeded</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Image</label>
+                                        <input type="file" name="userfile" id="userfile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="divider20"></div>
+                        <div class="form-group col-lg-12">
+                            <button type="submit" name="submit" class="btn btn-primary submit-btn"><i class="fa fa-plus"></i> Add</button>
+                            <a href="http://45.76.177.205/dev_works/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                    </div>
+                    </div>
+                </form>            </div>
+        </div>
+
+
+    </body>
+</html>

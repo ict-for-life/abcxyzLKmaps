@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Add Road Maintenance</div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <form action="http://45.76.177.205/road_maintenance/add_post" accept-charset="utf-8" role="form" method="post" id="add_road_maint_frm"><div style="display:none">
+                                    <input type="hidden" name="csrf_test_name" value="8274ee505099c122610670616c34a052" />
+                                </div>                            <input type="hidden" name="user_lat" id="user_lat">
+                                <input type="hidden" name="user_lng" id="user_lng">
+
+                                <div class="form-group col-lg-12">
+                                    <label>Road Name</label>
+                                    <select name="rd_id" id="rd_id" class="form-control chosen-select" data-placeholder="--Please Select--" autocomplete="off">
+                                        <option value="">--Please Select--</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Ward</label>
+                                    <select name="ward_list" id="ward_list" class="form-control">
+                                        <option value="">--Please Select--</option>
+
+                                        <option value="1">Ward 01 Wewala west</option>
+
+                                        <option value="4">WARD1</option>
+
+                                        <option value="5">WARD2</option>
+
+                                        <option value="3">WARD 3</option>
+
+                                        <option value="2">WARD 4</option>
+
+                                        <option value="6">WARD 5</option>
+
+                                        <option value="7">WARD 6</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>GN Division</label>
+                                    <select name="gn_list" id="gn_list" class="form-control">
+                                        <option value="">--Please Select--</option>
+
+                                        <option value="8">Aluthwatta 576</option>
+
+                                        <option value="9">Aluthwatta 576A</option>
+
+                                        <option value="4">Karavita</option>
+
+                                        <option value="3">Kokkavila</option>
+
+                                        <option value="2">Pitipana East</option>
+
+                                        <option value="7">Wewala East 562</option>
+
+                                        <option value="1">Wewala West</option>
+
+                                        <option value="6">Wewala West 562 B</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Year(Last Maintenance Done)</label>
+                                    <select name="year" id="year" class="form-control">
+                                        <option value='2000'>2000</option>  
+                                        <option value='2001'>2001</option>  
+                                        <option value='2002'>2002</option>  
+                                        <option value='2003'>2003</option>  
+                                        <option value='2004'>2004</option>  
+                                        <option value='2005'>2005</option>  
+                                        <option value='2006'>2006</option>  
+                                        <option value='2007'>2007</option>  
+                                        <option value='2008'>2008</option>  
+                                        <option value='2009'>2009</option>  
+                                        <option value='2010'>2010</option>  
+                                        <option value='2011'>2011</option>  
+                                        <option value='2012'>2012</option>  
+                                        <option value='2013'>2013</option>  
+                                        <option value='2014'>2014</option>  
+                                        <option value='2015'>2015</option>  
+                                        <option value='2016'>2016</option>  
+                                        <option value='2017'>2017</option>  
+                                        <option value='2018'>2018</option>  
+                                        <option value='2019'>2019</option>  
+                                        <option value='2020'>2020</option>  
+                                        <option value='2021'>2021</option>  
+                                        <option value='2022'>2022</option>  
+                                        <option value='2023'>2023</option>  
+                                        <option value='2024'>2024</option>  
+                                        <option value='2025'>2025</option>  
+                                        <option value='2026'>2026</option>  
+                                        <option value='2027'>2027</option>  
+                                        <option value='2028'>2028</option>  
+                                        <option value='2029'>2029</option>  
+                                        <option value='2030'>2030</option>  
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Maintenance Type</label>
+                                    <select name="maint_type" id="maint_type" class="form-control">
+                                        <option value="">N/A</option>
+                                        <option value="5">Others</option>
+                                        <option value="1">Patching the existing</option>
+                                        <option value="4">Re-construction</option>
+                                        <option value="3">Repair</option>
+                                        <option value="2">Tarring</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Maintenance Details</label>
+                                    <textarea name="maint_details" id="maint_details" class="form-control"></textarea>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Fund Source</label>
+                                    <select name="fund_src[]" id="fund_src" class="form-control chosen-select" multiple="" data-placeholder="--Please Select--" autocomplete="off">
+
+                                        <option value="1">LA</option>
+                                        <option value="4">Line Ministry</option>
+                                        <option value="3">Other PC funds</option>
+                                        <option value="6">Others</option>
+                                        <option value="5">Projects</option>
+                                        <option value="2">PSDG</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Implementation Partner</label>
+                                    <select name="impl_partner" id="impl_partner" class="form-control" autocomplete="off">
+                                        <option value="">N/A</option>
+                                        <option value="3">DS</option>
+                                        <option value="1">LA</option>
+                                        <option value="7">Others</option>
+                                        <option value="2">PC</option>
+                                        <option value="4">PRDA</option>
+                                        <option value="6">Projects</option>
+                                        <option value="5">RDA</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Status</label>
+                                    <select name="status" id="status" class="form-control" autocomplete="off">
+                                        <option value="">N/A</option>
+                                        <option value="1">On going</option>
+                                        <option value="2">Completed</option>
+                                        <option value="3">Partially completed</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-6">
+                                    <label>Maintenance: Start Date</label>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" id="start_dt" name="start_dt">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Maintenance: End Date</label>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" id="end_dt" name="end_dt">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>     
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Maintenance Changes (Manual)</label>
+                                    <input type="text" class="form-control" id="maint_mchanges" name="maint_mchanges">    
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Maintenance Changes (With Tool)</label>
+                                    <input type="text" class="form-control" id="maint_tchanges" name="maint_tchanges" disabled="">    
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <button type="submit" name="submit" class="btn btn-primary submit-btn"><i class="fa fa-plus"></i> Add</button>
+                                    <a href="http://45.76.177.205/road_maintenance/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                            </div>
+                            </form>
+                        </div> 
+                    </div>       
+
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

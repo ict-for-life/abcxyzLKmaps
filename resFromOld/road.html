@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Add New Road</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form action="http://45.76.177.205/roads/add_post" accept-charset="utf-8" role="form" method="post" id="add_road_frm" enctype="multipart/form-data"><div style="display:none">
+                                        <input type="hidden" name="csrf_test_name" value="8274ee505099c122610670616c34a052" />
+                                    </div>                                <input type="hidden" name="user_lat" id="user_lat">
+                                    <input type="hidden" name="user_lng" id="user_lng">
+
+                                    <div role="tabpanel">
+                                        <ul class="nav nav-tabs" role="tablist" id="tablist">
+                                            <li role="presentation" class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic Road Details</a></li>
+                                            <li role="presentation"><a href="#network" aria-controls="network" role="tab" data-toggle="tab">Core Network Related Info</a></li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="divider20"></div>
+                                            <div role="tabpanel" class="tab-pane active" id="basic">                          
+                                                <div class="">
+                                                    <div class="form-group col-lg-4">
+                                                        <label>District</label>
+                                                        <select name="rd_dis" id="rd_dis" class="form-control" autocomplete="off">
+                                                            <option value="">N/A</option>  
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-lg-4">
+                                                        <label>DS Division</label>
+                                                        <select name="rd_dsd" id="rd_dsd" class="form-control" autocomplete="off">
+                                                            <option value="">N/A</option>  
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="form-group col-lg-4">
+                                                        <label>Local Authority</label>
+                                                        <select class="form-control chosen-select" name="rd_la[]" id="rd_la" multiple="" data-placeholder="--Please Select--" autocomplete="off">
+                                                            <option value="">N/A</option>  
+                                                        </select>
+
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Road ID</label>
+                                                        <input type="text" name="rd_id" id="rd_id" class="form-control"  value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Road No</label>
+                                                        <input type="text" name="rd_no" id="rd_no" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Road Name</label>
+                                                        <input type="text" name="rd_name" id="rd_name" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Other Names</label>
+                                                        <input type="text" name="rd_other_name" id="rd_other_name" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <p class="form-inner-para text-warning">Start Point</p>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <p class="form-inner-para text-warning">End Point</p>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Name</label>
+                                                        <input type="text" name="rd_start_pt_name" id="rd_start_pt_name" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Coordinates</label>
+                                                        <input type="text" name="rd_start_lat" id="rd_start_lat" class="form-control" placeholder="Latitude" value=""><br>
+                                                        <input type="text" name="rd_start_lng" id="rd_start_lng" class="form-control" placeholder="Longitude" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Connect to A,B,C,D</label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rd_start_con" id="rd_start_con1" value="T"  > Yes                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rd_start_con" id="rd_start_con2" value="F"  > No                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Name</label>
+                                                        <input type="text" name="rd_end_pt_name" id="rd_end_pt_name" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Coordinates</label>
+                                                        <input type="text" name="rd_end_lat" id="rd_end_lat" class="form-control" placeholder="Latitude" value=""> <br>
+                                                        <input type="text" name="rd_end_lng" id="rd_end_lng" class="form-control" placeholder="Longitude" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Connect to A,B,C,D</label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rd_end_con" id="rd_end_con1" value="1" required=""  > Yes                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rd_end_con" id="rd_end_con2" value="0" required=""   > No                                                        </label>
+                                                    </div>
+
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Type of Surface</label><br>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox1" name="rd_surf_type[]" value="1" > Tar
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox2" name="rd_surf_type[]" value="2" > Earth
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox3" name="rd_surf_type[]" value="3" > Asphalt
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox4" name="rd_surf_type[]" value="4" > Concrete
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox5" name="rd_surf_type[]" value="5" > Gravel
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>m(manual) </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_mlen_tar" id="rd_mlen_tar" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_mlen_earth" id="rd_mlen_earth" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_mlen_asphalt" id="rd_mlen_asphalt" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_mlen_concrete" id="rd_mlen_concrete" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_mlen_gravel" id="rd_mlen_gravel" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>m(using tool) </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_tlen_tar" id="rd_tlen_tar" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_tlen_earth" id="rd_tlen_earth" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_tlen_asphalt" id="rd_tlen_asphalt" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_tlen_concrete" id="rd_tlen_concrete" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <input type="text" name="rd_tlen_gravel" id="rd_tlen_gravel" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Average Width in m(manual) </label>
+                                                        <input type="text" name="rd_avg_width_m" id="rd_avg_width_m" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Average Width in m(using tool) </label>
+                                                        <input type="text" name="rd_avg_width_t" id="rd_avg_width_t" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Right-of-Way in m </label>
+                                                        <input type="text" name="rd_right_way" id="rd_right_way" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <p class="form-inner-para text-warning">Details of structures </p>
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Pipe Type Culvert (Qty) </label>
+                                                        <input type="text" name="rd_st_pipe" id="rd_st_pipe" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Box Culvert (Qty) </label>
+                                                        <input type="text" name="rd_st_box" id="rd_st_box" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Causeway (Qty) </label>
+                                                        <input type="text" name="rd_st_cw" id="rd_st_cw" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Small Bridges (Qty) </label>
+                                                        <input type="text" name="rd_st_sb" id="rd_st_sb" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Earthern Drain (in m) </label>
+                                                        <input type="text" name="rd_st_ed" id="rd_st_ed" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Rubble Drain (in m) </label>
+                                                        <input type="text" name="rd_st_rd" id="rd_st_rd" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Concrete Drain (in m) </label>
+                                                        <input type="text" name="rd_st_cd" id="rd_st_cd" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Passable Vehicle</label><br>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox6" name="rd_ps_vle[]" value="1" > 2W
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox7" name="rd_ps_vle[]" value="2" > 3W
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox8" name="rd_ps_vle[]" value="3" > 4W
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox9" name="rd_ps_vle[]" value="4" > 6W
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox10" name="rd_ps_vle[]" value="5" > 8W
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Average Households Served </label>
+                                                        <input type="text" name="rd_avg_res" id="rd_avg_res" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-12">
+                                                        <p class="form-inner-para text-warning">No of service centers on the road </p>   
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Health Centers </label>
+                                                        <input type="text" name="rd_sc_health" id="rd_sc_health" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Schools </label>
+                                                        <input type="text" name="rd_sc_schools" id="rd_sc_schools" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Markets/Pola </label>
+                                                        <input type="text" name="rd_sc_pola" id="rd_sc_pola" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Religious Places </label>
+                                                        <input type="text" name="rd_sc_rel" id="rd_sc_rel" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Post Offices </label>
+                                                        <input type="text" name="rd_sc_pos" id="rd_sc_pos" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Industrial </label>
+                                                        <input type="text" name="rd_sc_ind" id="rd_sc_ind" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-3">
+                                                        <label>Financial Institutions </label>
+                                                        <input type="text" name="rd_sc_fi" id="rd_sc_fi" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Cemetery </label>
+                                                        <input type="text" name="rd_sc_cem" id="rd_sc_cem" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Playground/Park </label>
+                                                        <input type="text" name="rd_sc_play" id="rd_sc_play" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Other Services </label>
+                                                        <input type="text" name="rd_sc_other" id="rd_sc_other" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Present Condition of the road</label><br>
+                                                        <label class="radio-inline col-lg-2">
+                                                            <input type="radio" name="rd_con" id="rd_con1" value="1"  > Very Good                                                        </label>
+                                                        <label class="radio-inline col-lg-2">
+                                                            <input type="radio" name="rd_con" id="rd_con2" value="2"  > Good                                                        </label>
+                                                        <label class="radio-inline col-lg-2">
+                                                            <input type="radio" name="rd_con" id="rd_con3" value="3"  > Average                                                        </label>
+                                                        <label class="radio-inline col-lg-2">
+                                                            <input type="radio" name="rd_con" id="rd_con4" value="4"  > Bad                                                        </label>
+                                                        <label class="radio-inline col-lg-2">
+                                                            <input type="radio" name="rd_con" id="rd_con5" value="5"  > Very Bad                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Current Issues with the road</label><br>
+                                                        <label class="checkbox-inline col-lg-1">
+                                                            <input type="checkbox" id="inlineCheckbox11" name="rd_issues[]" value="1" > Cracking
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-1">
+                                                            <input type="checkbox" id="inlineCheckbox14" name="rd_issues[]" value="2" > Potholes
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox12" name="rd_issues[]" value="3" > Shoulder left
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox15" name="rd_issues[]" value="4" > Shoulder right
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox13" name="rd_issues[]" value="5" > Edge Break left
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox16" name="rd_issues[]" value="6" > Edge break right
+                                                        </label>
+                                                        <br>
+                                                        <label class="checkbox-inline col-lg-1">
+                                                            <input type="checkbox" id="inlineCheckbox17" name="rd_issues[]" value="7" > Others
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox18" name="rd_issues[]" value="8" > No Issue
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Importance of Transport</label><br>
+                                                        <label class="checkbox-inline col-lg-3">
+                                                            <input type="checkbox" id="inlineCheckbox19" name="rd_imp_trans[]" value="1" > Agricultural Inputs/Products
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-3">
+                                                            <input type="checkbox" id="inlineCheckbox20" name="rd_imp_trans[]" value="2" > Industrial Inputs/Products
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox21" name="rd_imp_trans[]" value="3" > Passenger
+                                                        </label>
+                                                        <label class="checkbox-inline col-lg-2">
+                                                            <input type="checkbox" id="inlineCheckbox22" name="rd_imp_trans[]" value="4" > Others
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Service provided duration</label>
+                                                        <select class="form-control" name="durationList" id="durationList" autocomplete="off">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="1">Impassable throughout the year</option>
+                                                            <option value="2">Impassable for most of the rainy days</option>
+                                                            <option value="3">Closed for a long duration during heavy rain</option>
+                                                            <option value="4">Closed for sometimes during heavy rain</option>
+                                                            <option value="5">Passable throughout the year</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Priority for Improvements</label>
+                                                        <select class="form-control" name="priorityList" id="priorityList" autocomplete="off">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="1">Low</option>
+                                                            <option value="2">Medium</option>
+                                                            <option value="3">High</option>
+
+                                                        </select>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div role="tabpanel" class="tab-pane" id="network">
+                                                <div class="divider20"></div>
+                                                <div class="">
+
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Ward crossed by the road</label>
+                                                        <select class="form-control chosen-select" name="wardList[]" id="wardList" multiple="" data-placeholder="--Please Select--" autocomplete="off">
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>GN Divisions passed by the road</label>
+                                                        <select name="gnList[]" id="gnList" multiple="" class="form-control chosen-select" data-placeholder="--Please Select--" autocomplete="off"> 
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Number of Households served by the road</label>
+                                                        <input type="text" name="rd_family_count" id="rd_family_count" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Availability of all-weather road for 50% of the households in the road</label>
+                                                        <select class="form-control" name="rd_avail_families_list" id="rd_avail_families_list" autocomplete="off">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="1">Less than 0.5km</option>
+                                                            <option value="2">Between 0.5 - 1.0km</option>
+                                                            <option value="3">Between 1.0 - 2.0km</option>
+                                                            <option value="4">Beyond 2.0km</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-lg-12">
+                                                        <p class="form-inner-para text-warning">Daily Traffic Volume : No of Trips made per day</p> 
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Motorcycles</label>
+                                                        <input type="text" name="rd_tra_mb" id="rd_tra_mb" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Three-wheelers</label>
+                                                        <input type="text" name="rd_tra_tw" id="rd_tra_tw" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Two wheel tractors</label>
+                                                        <input type="text" name="rd_tra_twt" id="rd_tra_twt" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Cars/vans</label>
+                                                        <input type="text" name="rd_tra_cars" id="rd_tra_cars" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>Lorry/Bus</label>
+                                                        <input type="text" name="rd_tra_bus" id="rd_tra_bus" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-2">
+                                                        <label>4 Wheel tractors</label>
+                                                        <input type="text" name="rd_tra_4w" id="rd_tra_4w" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12">
+                                                        <p class="form-inner-para text-warning">Number of trips per day used for Agriculture/plantation Inputs /Products by:</p> 
+                                                    </div>
+
+                                                    <div class="form-group col-lg-4">
+                                                        <label>Motor bicycles/Push Bicycles</label>
+                                                        <input type="text" name="rd_agri_motor" id="rd_agri_motor" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-4">
+                                                        <label>Three-wheelers/two wheel tractors</label>
+                                                        <input type="text" name="rd_agri_threew" id="rd_agri_threew" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-4">
+                                                        <label>Four wheel tractors/lorries</label>
+                                                        <input type="text" name="rd_agri_fourw" id="rd_agri_fourw" class="form-control" value="">
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Number of isolated pockets of families connected by the road</label>
+                                                        <input type="text" name="rd_no_iso" id="rd_no_iso" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>% of families in the road receiving Samurdhi benefits</label>
+                                                        <input type="text" name="rd_no_samurdhi" id="rd_no_samurdhi" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Number of motorable roads crossing the road</label>
+                                                        <input type="text" name="rd_no_motor_bics" id="rd_no_motor_bics" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Availability of right-of-way for improvements</label>
+                                                        <select class="form-control" name="rd_avail_right_way_list" id="rd_avail_right_way_list" autocomplete="off">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="1">No additional land is required</option>
+                                                            <option value="2">Less than 1m land acquisition is required at some places</option>
+                                                            <option value="3">Land acquisition is required at all places</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Conflict affected people from the total beneficiaries of the road(%)</label>
+                                                        <input type="text" name="rd_conflicted" id="rd_conflicted" class="form-control" value="">
+                                                    </div>
+                                                    <div class="form-group col-lg-6">
+                                                        <label>Important for Women Activities(ex. maternal care facilities, hospitals, etc.)</label><br>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rd_women_act" id="rd_women_act1" value="T"  > Yes                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="rd_women_act" id="rd_women_act2" value="F"  > No                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group col-lg-12">
+                                        <button type="submit" name="add_road" id="add_road" class="btn btn-primary submit-btn"><i class="fa fa-plus"></i> Add</button>
+                                        <a href="http://45.76.177.205/roads/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                                </div>
+                                </form>                            </div>
+                        </div>
+                    </div>       
+
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

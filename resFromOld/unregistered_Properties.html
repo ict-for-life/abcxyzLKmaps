@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Add Unregistered Property
+                    </div>
+                    <div class="panel-body">
+                        <form action="http://45.76.177.205/unregistered_properties/add_post" accept-charset="utf-8" role="form" method="post" id="add_prop_frm" enctype="multipart/form-data"><div style="display:none">
+                                <input type="hidden" name="csrf_test_name" value="8274ee505099c122610670616c34a052" />
+                            </div>                        <input type="hidden" name="user_lat" id="user_lat">
+                            <input type="hidden" name="user_lng" id="user_lng">
+
+                            <div class="row">       
+                                <div class="form-group col-lg-12">
+                                    <label>Road Name</label> 
+                                    <select name="road_list" id="road_list" class="form-control">
+                                        <option value="">--Please Select--</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Ward</label>
+                                    <select name="ward_list" id="ward_list" class="form-control">
+                                        <option value="">--Please Select--</option>
+
+                                        <option value="1">Ward 01 Wewala west</option>
+
+                                        <option value="4">WARD1</option>
+
+                                        <option value="5">WARD2</option>
+
+                                        <option value="3">WARD 3</option>
+
+                                        <option value="2">WARD 4</option>
+
+                                        <option value="6">WARD 5</option>
+
+                                        <option value="7">WARD 6</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>GN Division</label>
+                                    <select name="gn_list" id="gn_list" class="form-control">
+                                        <option value="">--Please Select--</option>
+
+                                        <option value="8">Aluthwatta 576</option>
+
+                                        <option value="9">Aluthwatta 576A</option>
+
+                                        <option value="4">Karavita</option>
+
+                                        <option value="3">Kokkavila</option>
+
+                                        <option value="2">Pitipana East</option>
+
+                                        <option value="7">Wewala East 562</option>
+
+                                        <option value="1">Wewala West</option>
+
+                                        <option value="6">Wewala West 562 B</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Address</label>
+                                    <input type="text" name="address" id="address" class="form-control">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Contact Person</label>
+                                    <input type="text" name="owner" id="owner" class="form-control">
+                                </div>
+
+                                <div class="form-group col-lg-6">
+                                    <label>Phone</label>
+                                    <input type="text" name="phone" id="phone" class="form-control">
+                                </div>
+
+
+                                <div class="form-group col-lg-4 ">
+                                    <label>Map View</label>
+                                    <button type="button" class="btn btn-warning form-control" data-toggle="modal" data-target="#asset_map_modal">Set Location</button>
+
+
+                                </div>
+                                <div class="form-group col-lg-4">
+                                    <label>Latitude</label>
+                                    <input type="text" name="tlat" id="lat" class="form-control">
+                                </div>
+                                <div class="form-group col-lg-4">
+                                    <label>Longitude</label>
+                                    <input type="text" name="tlng" id="lng" class="form-control">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label>Image</label>
+                                    <input type="file" name="userfile" id="userfile">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="divider20"></div>
+                                <div class="form-group col-lg-12">
+                                    <button type="submit" name="submit" class="btn btn-primary submit-btn"><i class="fa fa-plus"></i> Add</button>
+                                    <a href="http://45.76.177.205/unregistered_properties/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                            </div>
+                            </div>
+                        </form>                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
