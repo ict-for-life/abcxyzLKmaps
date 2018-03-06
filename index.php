@@ -305,12 +305,12 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                             <script id="menuLoader">
                                 function Odash() {
                                     $('#loader').load('php/Dashboard.php');
-                                    document.getElementById('NameDash').class = 'active';
+                                    //document.getElementById('NameDash').class = 'active';
 
                                 }
                                 function ORP() {
                                     $('#loader').load('html/Rproperties.html');
-                                    document.getElementById("rp").class = "active"
+                                    //document.getElementById("rp").class = "active"
 
                                 }
                                 function OLAP() {
@@ -368,10 +368,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
 
 
                     </article>
-                    <footer class="footer">
-
-                    </footer>
-
+                   
                     <!-- /.modal -->
 
                     <!-- /.modal -->
