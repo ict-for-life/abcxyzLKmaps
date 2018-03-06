@@ -1293,7 +1293,12 @@ $(function () {
 
 	function setThemeState() {
 		// set theme type
-		
+		if (themeSettings.themeName) {
+			$styleLink.attr('href', 'css/app-' + themeSettings.themeName + '.css');
+		}
+		else {
+			$styleLink.attr('href', 'css/app.css');
+		}
 
 		// App classes
 		$app.removeClass('header-fixed footer-fixed sidebar-fixed');
@@ -1314,7 +1319,30 @@ $(function () {
 	*			Update theme controls based on options
 	*************************************************/
 
-	
+	function setThemeControlsState() {
+		// set color switcher
+		$customizeMenuColorBtns.each(function() {
+			if($(this).data('theme') === themeSettings.themeName) {
+				$(this).addClass('active');
+			}
+			else {
+				$(this).removeClass('active');
+			}
+		});
+
+		// set radio buttons
+		$customizeMenuRadioBtns.each(function() {
+			var name = $(this).prop('name');
+			var value = $(this).val();
+
+			if (themeSettings[name] === value) {
+				$(this).prop("checked", true );
+			}
+			else {
+				$(this).prop("checked", false );
+			}
+		});
+	}
 
 	/************************************************
 	*			Update theme color
@@ -1328,9 +1356,20 @@ $(function () {
 	*				Storage Functions
 	*************************************************/
 
-	
+	function getThemeSettings() {
+		var settings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
 
-	
+		settings.headerPosition = settings.headerPosition || '';
+		settings.sidebarPosition = settings.sidebarPosition || '';
+		settings.footerPosition = settings.footerPosition || '';
+
+		return settings;
+	}
+
+	function saveThemeSettings() {
+		localStorage.setItem('themeSettings', JSON.stringify(themeSettings));
+	}
+
 });
 $(function() {
 

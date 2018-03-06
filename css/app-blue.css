@@ -1806,9 +1806,9 @@ span a {
 .modal .modal-footer .btn {
   margin-bottom: 0; }
 
-/*.sidebar {
+.sidebar {
   background-color: #3a4651;
-  width:250px;
+  width:230px;
   padding-bottom: 60px;
   position: absolute;
   top: 0;
@@ -1907,7 +1907,7 @@ span a {
   @media (max-width: 991px) {
     .sidebar-open .sidebar-overlay {
       left: 0;
-      opacity: 1; } }*/
+      opacity: 1; } }
 
 .flot-chart {
   display: block;
