@@ -18,15 +18,10 @@ if ($_SESSION["u_img"] != "") {
 
 <html>
     <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="css/vendor.css">
+
+        <link rel="stylesheet" href="css/app-blue.css">
+       
         <style>
             .prof_main{
                 position:fixed;
@@ -137,7 +132,7 @@ if ($_SESSION["u_img"] != "") {
         </script>
     </head>
     <body>
-        <div class="h-100 row align-items-center" >
+        <div class="col-md-12" >
             <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
                 <table align="center" width="80%" height="100%">
                     <tr>
@@ -149,7 +144,7 @@ if ($_SESSION["u_img"] != "") {
 
                             <input id="file-input" type="file" name="file" id="file" onchange="setprof(this);"/>
                         </div>
-                        <h6>Click On Image to Select Profile Picture</h6>
+                        <h6><font color="#000000">Click On Image to Select Profile Picture</font></h6>
                         <a href="#" class="btn btn-primary" onclick="remove_img()">Remove</a>
 
                     </center>
@@ -157,16 +152,16 @@ if ($_SESSION["u_img"] != "") {
 
                     <td>
 
-                        <div class="col-xs-12"><lable> User Name </lable><input type="text" class="form-control" id="userName" value="<?php echo $user_name; ?>" disabled/> <br>
-                            <lable> First Name </lable><input type="text" class="form-control" id="userFname" name="u_fname" value="<?php echo $fname; ?>" /> <br>
-                            <lable> Last Name </lable><input type="text" class="form-control" id="userLname" name="u_lname" value="<?php echo $lname; ?>" /> <br></div>
+                        <div class="col-xs-12"><font color="#000000"> User Name</font> </lable><input type="text" class="form-control" id="userName" value="<?php echo $user_name; ?>" disabled/> <br>
+                           <font color="#000000"> First Name </font><input type="text" class="form-control" id="userFname" name="u_fname" value="<?php echo $fname; ?>" /> <br>
+                           <font color="#000000">Last Name </font><input type="text" class="form-control" id="userLname" name="u_lname" value="<?php echo $lname; ?>" /> <br></div>
 
                     </td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <div class="col-xs-6"><lable> Email </lable><input type="email" class="form-control" id="useEmail" name="u_email" value="<?php echo $email; ?>"/> <br>
-                                <lable> Phone Number </lable><input type="text" class="form-control" id="userNumber" name="u_pno" value="<?php echo $pno; ?>" onkeypress="javascript:return isNumber(event)"/> <br></div>
+                            <div class="col-xs-6"><font color="#000000"> Email </font><input type="email" class="form-control" id="useEmail" name="u_email" value="<?php echo $email; ?>"/> <br>
+                                <font color="#000000"> Phone Number </font><input type="text" class="form-control" id="userNumber" name="u_pno" value="<?php echo $pno; ?>" onkeypress="javascript:return isNumber(event)"/> <br></div>
 
 
 
