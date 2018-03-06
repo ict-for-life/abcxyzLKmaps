@@ -25,7 +25,7 @@ and open the template in the editor.
                         Add Advertisement Board
                     </div>
                     <div class="panel-body">
-                        <form action="http://45.76.177.205/advertisement_boards/add_post" accept-charset="utf-8" role="form" method="post" id="add_adv_board_frm" enctype="multipart/form-data"><div style="display:none">
+                        <form action="controllers/co_avb_save.php" accept-charset="utf-8" role="form" method="post" id="add_adv_board_frm" enctype="multipart/form-data"><div style="display:none">
                                 <input type="hidden" name="csrf_test_name" value="8274ee505099c122610670616c34a052" />
                             </div>                        <input type="hidden" name="user_lat" id="user_lat">
                             <input type="hidden" name="user_lng" id="user_lng">
@@ -35,160 +35,7 @@ and open the template in the editor.
                                     <label>Advertisement Board ID</label>
                                     <input type="text" name="adv_board_id" id="adv_board_id" class="form-control">
                                 </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Property Name</label>
-                                    <select name="prop_list" id="prop_list" class="form-control">
-                                        <option value="">--Please Select--</option>
-
-                                        <option value="91"></option>
-
-                                        <option value="77"></option>
-
-                                        <option value="78"></option>
-
-                                        <option value="79"></option>
-
-                                        <option value="80"></option>
-
-                                        <option value="81"></option>
-
-                                        <option value="82"></option>
-
-                                        <option value="83"></option>
-
-                                        <option value="84"></option>
-
-                                        <option value="85"></option>
-
-                                        <option value="86"></option>
-
-                                        <option value="73"></option>
-
-                                        <option value="74"></option>
-
-                                        <option value="75"></option>
-
-                                        <option value="76"></option>
-
-                                        <option value="19"></option>
-
-                                        <option value="97"></option>
-
-                                        <option value="98"></option>
-
-                                        <option value="96"></option>
-
-                                        <option value="95"></option>
-
-                                        <option value="29">10</option>
-
-                                        <option value="30">10/A</option>
-
-                                        <option value="24">11</option>
-
-                                        <option value="25">11/2</option>
-
-                                        <option value="2">230/23</option>
-
-                                        <option value="18">300</option>
-
-                                        <option value="26">4</option>
-
-                                        <option value="13">456</option>
-
-                                        <option value="21">5</option>
-
-                                        <option value="27">6</option>
-
-                                        <option value="20">7</option>
-
-                                        <option value="28">8</option>
-
-                                        <option value="103">898</option>
-
-                                        <option value="23">9</option>
-
-                                        <option value="22">9A</option>
-
-                                        <option value="61">c</option>
-
-                                        <option value="62">caaa</option>
-
-                                        <option value="89">d1</option>
-
-                                        <option value="107">ddd</option>
-
-                                        <option value="63">DDD</option>
-
-                                        <option value="90">hhh</option>
-
-                                        <option value="4">House</option>
-
-                                        <option value="7">House</option>
-
-                                        <option value="6">House</option>
-
-                                        <option value="5">House Building Now</option>
-
-                                        <option value="8">House newly built</option>
-
-                                        <option value="9">House Partly build</option>
-
-                                        <option value="3">House property</option>
-
-                                        <option value="88">ioio</option>
-
-                                        <option value="115">Kkkkkl</option>
-
-                                        <option value="64">KO</option>
-
-                                        <option value="71">oooo</option>
-
-                                        <option value="65">op</option>
-
-                                        <option value="1">P009</option>
-
-                                        <option value="113">p2</option>
-
-                                        <option value="105">pop</option>
-
-                                        <option value="72">ppp</option>
-
-                                        <option value="106">SSS</option>
-
-                                        <option value="17">Test Ahilan</option>
-
-                                        <option value="12">Test Ahilan</option>
-
-                                        <option value="14">Test Ahilan</option>
-
-                                        <option value="116">ttt</option>
-
-                                        <option value="66">uu</option>
-
-                                        <option value="108">www</option>
-
-                                        <option value="101"></option>
-
-                                        <option value="70"></option>
-
-                                        <option value="111"></option>
-
-                                        <option value="69"></option>
-
-                                        <option value="110"></option>
-
-                                        <option value="109"></option>
-
-                                        <option value="99"></option>
-
-                                        <option value="68"></option>
-
-                                        <option value="100"></option>
-
-                                        <option value="15"></option>
-                                    </select>
-                                </div>
+                               
                                 <div class="form-group col-lg-6">
                                     <label>Road Name</label>
                                     <select name="road_list" id="road_list" class="form-control">
@@ -259,10 +106,10 @@ and open the template in the editor.
                                 <div class="form-group col-lg-4">
                                     <label>Is Exists within Property</label><br>
                                     <label class="radio-inline">
-                                        <input type="radio" name="ad_exist_property" id="ad_exist_property1"  value="T"> Yes
+                                        <input type="radio" name="ad_exist_property" id="ad_exist_property1"  value="Yes"> Yes
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="ad_exist_property" id="ad_exist_property2"  value="F"> No
+                                        <input type="radio" name="ad_exist_property" id="ad_exist_property2"  value="No"> No
                                     </label>
                                 </div>
                                 <div class="form-group col-lg-6">
@@ -302,7 +149,7 @@ and open the template in the editor.
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label>Image</label>
-                                    <input type="file" name="userfile" id="userfile">
+                                    <input type="file" name="file" id="userfile">
                                 </div>
 
                                 <h4 class="col-md-12 page-header">Owner Details</h4>
@@ -339,7 +186,7 @@ and open the template in the editor.
                                 <div class="divider20"></div>
                                 <div class="form-group col-lg-12">
                                     <button type="submit" name="submit" class="btn btn-primary submit-btn"><i class="fa fa-plus"></i> Add</button>
-                                    <a href="http://45.76.177.205/advertisement_boards/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                            </div>
+                                    <a href="#" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                            </div>
                             </div>
                         </form>                    </div>
                 </div>
