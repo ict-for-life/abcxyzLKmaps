@@ -187,7 +187,10 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
             </script>
         </head>
 
-        <body>
+        <body onload="checkUserType()">
+            
+            <input type="hidden" id="role" value="<?php echo $_SESSION["u_roll"]; ?>">
+            
             <div class="main-wrapper">
                 <div class="app" id="app">
                     <header class="header" id="top">
@@ -207,7 +210,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                                             <?php echo $user_name; ?>
                                         </span> </a>
                                     <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1"> 
-                                        <a class="dropdown-item" href="#" onclick="Eprof()">
+                                        <a class="dropdown-item" href="#" id="editprofile" onclick="Eprof()">
                                             <i class="fa fa-gear icon"></i>
                                             Edit Profile
                                         </a>
@@ -273,29 +276,29 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                                         <li> <a href="#" onclick="OR()">
                                                 <i class="fa fa-bar-chart-o" onclick="OR()"></i> Reports
                                             </a> </li>
-                                        <li> <a href="#">
+                                        <li id="masterData"> <a href="#">
                                                 <i class="fa fa-puzzle-piece"></i> Master Data
                                                 <i class="fa arrow"></i>
                                                 <ul>
-                                                <li id="rp"> <a href="#" onclick="">
-                                                        Types
-                                                    </a> </li>
-                                                <li> <a href="#" onclick="">
-                                                        DS Divisions
-                                                    </a> </li>
-                                                <li> <a href="#" onclick="">
-                                                        Local Authorities 
-                                                    </a> </li>
-                                                     <li> <a href="#" onclick="">
-                                                        Wards
-                                                    </a> </li>
-                                                     <li> <a href="#" onclick="">
-                                                        GN Divisions 
-                                                    </a> </li>
-                                            </ul>
-                                                
+                                                    <li id="rp"> <a href="#" onclick="">
+                                                            Types
+                                                        </a> </li>
+                                                    <li> <a href="#" onclick="">
+                                                            DS Divisions
+                                                        </a> </li>
+                                                    <li> <a href="#" onclick="">
+                                                            Local Authorities 
+                                                        </a> </li>
+                                                    <li> <a href="#" onclick="">
+                                                            Wards
+                                                        </a> </li>
+                                                    <li> <a href="#" onclick="">
+                                                            GN Divisions 
+                                                        </a> </li>
+                                                </ul>
+
                                             </a> </li>
-                                        <li> <a href="#">
+                                            <li id="userManagement"> <a href="#">
                                                 <i class="fa fa-group"></i> User Management
                                             </a> </li>
                                     </ul>
@@ -354,8 +357,8 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                                     //document.getElementById("rp").class = "active"
 
                                 }
-                                function Eprof(){
-                                     $('#loader').load('php/profile.php');
+                                function Eprof() {
+                                    $('#loader').load('php/profile.php');
                                 }
 
                             </script>
@@ -368,7 +371,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
 
 
                     </article>
-                   
+
                     <!-- /.modal -->
 
                     <!-- /.modal -->
@@ -429,6 +432,29 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                                     xhttp.send();
 
                                 }
+
+
+                                function checkUserType() {
+
+                                        var user_role = document.getElementById('role').value;
+
+                                    alert("Awaaaa " + user_role);
+                                    if (user_role == "Country Admin") {
+                                        document.getElementById('masterData').style.display = "block";
+                                        document.getElementById('userManagement').style.display = "block";
+                                        document.getElementById('editprofile').style.display = "block";
+                                    } else {
+
+                                        document.getElementById('masterData').style.display = "none";
+                                        document.getElementById('userManagement').style.display = "none";
+                                        document.getElementById('editprofile').style.display = "none";
+
+                                    }
+
+
+                                }
+
+
             </script>
         </body>
 
