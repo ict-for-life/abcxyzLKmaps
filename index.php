@@ -187,7 +187,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
             </script>
         </head>
 
-        <body onload="checkUserType()">
+        <body onload="mainfunc()">
             
             <input type="hidden" id="role" value="<?php echo $_SESSION["u_roll"]; ?>">
             
@@ -435,6 +435,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
 
 
                                 function checkUserType() {
+                                    
 
                                         var user_role = document.getElementById('role').value;
 
@@ -452,6 +453,10 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                                     }
 
 
+                                }
+                                function mainfunc(){
+                                    Odash();
+                                    checkUserType();
                                 }
 
 

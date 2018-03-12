@@ -8,11 +8,24 @@
 ?>
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
     <body>
-        <div>DashBoard</div>
+        <div class="col-lg-12">
+            
+            <table align="center" height="100%" width="100%" border="0">
+                <tr>
+                    <td><img src="images/recent.png"  height="50%"></td>
+                    <td rowspan="2"><img src="images/map.png"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/details.png" height="50%"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="images/tax.png"></td>
+                </tr>
+                
+            </table>
+        </div>
     </body>
 </html>
