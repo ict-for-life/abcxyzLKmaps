@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-    </head>
-    <body>
-
-        <div class="row">
+<div class="row">
             <div class="panel-group col-lg-12" id="accordion" role="tablist" aria-multiselectable="true">
-                <form action="http://45.76.177.205/properties/add_post" accept-charset="utf-8" role="form" method="post" id="add_prop_frm" enctype="multipart/form-data"><div style="display:none">
+                <form action="http://45.76.177.205/la_owned_properties/add_post" accept-charset="utf-8" role="form" method="post" id="add_prop_frm" enctype="multipart/form-data"><div style="display:none">
                         <input type="hidden" name="csrf_test_name" value="8274ee505099c122610670616c34a052" />
                     </div>                <input type="hidden" name="user_lat" id="user_lat">
                     <input type="hidden" name="user_lng" id="user_lng">
@@ -29,7 +10,7 @@ and open the template in the editor.
                             <h4 class="panel-title">
                                 <span class="glyphicon glyphicon-minus"></span>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Registered Property Details
+                                    Property Details
                                 </a>
                             </h4>
                         </div>
@@ -37,7 +18,7 @@ and open the template in the editor.
                             <div class="panel-body">
                                 <div class="row">       
                                     <div class="form-group col-lg-12">
-                                        <label>Road Name</label> 
+                                        <label>Road Name</label>
                                         <select name="road_list" id="road_list" class="form-control">
                                             <option value="">--Please Select--</option>
                                         </select>
@@ -45,13 +26,13 @@ and open the template in the editor.
 
                                     <div class="form-group col-lg-6">
                                         <label>Property Id</label> 
-                                        <input type="text" name="pty_id" id="pty_id" class="form-control" >
+                                        <input type="text" name="pty_id" id="pty_id" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Assessment Number</label> <span class="required">*</span>
                                         <input type="text" name="ass_no" id="ass_no" class="form-control" required="">
                                     </div>
-                                    <div class="form-group col-lg-12 loc_wrapper">
+                                    <div class="form-group col-lg-12">
                                         <label>Address </label>
                                         <input type="text" name="loc" id="loc" class="form-control">
                                     </div>
@@ -103,7 +84,7 @@ and open the template in the editor.
                                     </div>
 
                                     <div class="form-group col-lg-4">
-                                        <label>Owner(As per the LA Register)</label>
+                                        <label>Owner</label>
                                         <input type="text" name="owner" id="owner" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-4">
@@ -124,58 +105,130 @@ and open the template in the editor.
                                         </label>
                                     </div>
                                     <div class="form-group col-lg-12 comment-wrapper">
-                                        <label>Comment</label>
+                                        <label>Comment(Reason for disagreement)</label>
                                         <textarea name="comment" id="comment" class="form-control"></textarea>
                                     </div>
-                                    <div class="form-group col-lg-4">
-                                        <label>Property Type - Verified in field</label>
-                                        <select name="pty_type" id="pty_type" class="form-control">
+
+
+                                    <div class="form-group col-lg-6">
+                                        <label>LA Property Type</label>
+                                        <select name="la_pty_type" id="la_pty_type" class="form-control">
                                             <option value="">--Please Select--</option>
 
-                                            <option value="5">Agricultural/Garden </option>
+                                            <option value="9">Ayurveda Hospital</option>
 
-                                            <option value="1">Commercial</option>
+                                            <option value="7">Cemetery</option>
 
-                                            <option value="3">Government</option>
+                                            <option value="3">Commercial Premise</option>
 
-                                            <option value="2">Household</option>
+                                            <option value="2">Community Center</option>
+
+                                            <option value="13">Cultural Hall</option>
+
+                                            <option value="1">Health Cente</option>
+
+                                            <option value="10">Library</option>
+
+                                            <option value="4">Market/Fair</option>
+
+                                            <option value="14">Office Buildings </option>
+
+                                            <option value="5">Open land</option>
+
+                                            <option value="15">Other buildings</option>
+
+                                            <option value="16">Others</option>
+
+                                            <option value="6">Playground/Park</option>
+
+                                            <option value="8">Pre-School</option>
+
+                                            <option value="12">Public Toilet</option>
+
+                                            <option value="11">Public well</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-lg-6 st_op_wrapper">
+                                        <label>Status of Operation</label>
+                                        <select name="st_op[]" id="st_op" class="form-control" multiple="">
+                                            <option value="">--Please Select--</option>
+                                            <option value="1">Operated by LA</option>
+                                            <option value="2">Legally used by others</option>
+                                            <option value="3">Illegally used by others</option>
+                                            <option value="4">Not used</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-lg-6">
+                                        <label>Current date(status recorded date)</label>
+                                        <div class="input-group">
+                                            <input type="date" name="cur_date" id="cur_date" class="form-control">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-lg-6">
+                                        <label>Deed or Vested</label><br>
+                                        <select name="deed_vested" id="deed_vested" class="form-control">
+                                            <option value='1'>Yes</option>
+                                            <option value='2'>No</option>
+                                            <option value='3' selected="">N/A</option>
+                                        </select>
+                                    </div>
 
 
-                                            <option value="4">Open Land</option>
 
-                                            <option value="7">Others</option>
+                                    <div class="form-group col-lg-6">
+                                        <label>Year of Last maintenance done</label>
+                                        <select name="year" id="year" class="form-control">
+                                            <option value="">--Please Select--</option>
+                                            <option value='2000'>2000</option>  
+                                            <option value='2001'>2001</option>  
+                                            <option value='2002'>2002</option>  
+                                            <option value='2003'>2003</option>  
+                                            <option value='2004'>2004</option>  
+                                            <option value='2005'>2005</option>  
+                                            <option value='2006'>2006</option>  
+                                            <option value='2007'>2007</option>  
+                                            <option value='2008'>2008</option>  
+                                            <option value='2009'>2009</option>  
+                                            <option value='2010'>2010</option>  
+                                            <option value='2011'>2011</option>  
+                                            <option value='2012'>2012</option>  
+                                            <option value='2013'>2013</option>  
+                                            <option value='2014'>2014</option>  
+                                            <option value='2015'>2015</option>  
+                                            <option value='2016'>2016</option>  
+                                            <option value='2017'>2017</option>  
+                                            <option value='2018'>2018</option>  
+                                            <option value='2019'>2019</option>  
+                                            <option value='2020'>2020</option>  
+                                            <option value='2021'>2021</option>  
+                                            <option value='2022'>2022</option>  
+                                            <option value='2023'>2023</option>  
+                                            <option value='2024'>2024</option>  
+                                            <option value='2025'>2025</option>  
+                                            <option value='2026'>2026</option>  
+                                            <option value='2027'>2027</option>  
+                                            <option value='2028'>2028</option>  
+                                            <option value='2029'>2029</option>  
+                                            <option value='2030'>2030</option>  
+                                        </select>
+                                    </div>
 
-                                            <option value="9">Private</option>
+                                    <div class="form-group col-lg-6 mnt_st_wrapper">
+                                        <label>Maintenance status</label>
+                                        <select name="mt_status" id="mt_status" class="form-control">
+                                            <option value="">--Please Select--</option>
+                                            <option value="1">Basic Repair</option>
+                                            <option value="2">Replacement of Equipment</option>
+                                            <option value="3">Full Repair</option>
+                                            <option value="4">Other</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group col-lg-4">
-                                        <label>Property Type - Land Register</label>
-                                        <select name="pty_type_land_register" id="pty_type_land_register" class="form-control">
-                                            <option value="">--Please Select--</option>
-
-                                            <option value="5">Agricultural/Garden </option>
-
-                                            <option value="1">Commercial</option>
-
-                                            <option value="3">Government</option>
-
-                                            <option value="2">Household</option>
-
-
-                                            <option value="4">Open Land</option>
-
-                                            <option value="7">Others</option>
-
-                                            <option value="9">Private</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-lg-4">
-                                        <label>As of</label>
-                                        <input type="text" name="as_of" id="as_of" class="form-control">
-                                    </div>
-
-                                    <div class="form-group col-lg-3">
                                         <label>Building Approval Obtained</label>
                                         <br>
                                         <label class="radio-inline">
@@ -184,7 +237,7 @@ and open the template in the editor.
                                             <input type="radio" name="bao" id="bao2" value="F" > No                                    </label>
                                     </div>
 
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-4">
                                         <label>Certificate of Conformity Obtained</label>
                                         <br>
                                         <label class="radio-inline">
@@ -193,7 +246,7 @@ and open the template in the editor.
                                             <input type="radio" name="cco" id="cco2" value="F" > No                                    </label>
                                     </div>
 
-                                    <div class="form-group col-lg-3 tlo">
+                                    <div class="form-group col-lg-4 tlo">
                                         <label>Trade License Obtained</label>
                                         <br>
                                         <label class="radio-inline">
@@ -202,6 +255,7 @@ and open the template in the editor.
                                             <input type="radio" name="tlo" id="tlo2" value="F" > No                                    </label>
                                     </div>
                                     <div class="clearfix"></div>
+
                                     <div class="form-group col-lg-4 ">
                                         <label>Map View</label>
                                         <button type="button" class="btn btn-warning form-control" data-toggle="modal" data-target="#asset_map_modal">Set Coordinates</button>
@@ -225,7 +279,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-info">
+                    <div class="panel panel-info hidden">
                         <div class="panel-heading" role="tab" id="headingTwo">
                             <h4 class="panel-title">
                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> 
@@ -323,10 +377,34 @@ and open the template in the editor.
                                         </select>    
                                     </div>
 
-
+                                    <div class="form-group col-lg-6">
+                                        <label>Assessment Tax Paid(Last Quarter) </label>
+                                        <br>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pty_ast_paid_last" id="last_paid1" value="T" > Yes                                    </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pty_ast_paid_last" id="last_paid2" value="F" > No                                    </label>
+                                    </div>
 
                                     <div class="form-group col-lg-6">
-                                        <label>Assessment Tax Paid for the Current Year/Quarter</label>
+                                        <label>Period(Quarter) </label>
+                                        <br>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="period" id="period1" value="1"> 1
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="period" id="period2" value="2"> 2
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="period" id="period3" value="3"> 3
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="period" id="period4" value="4"> 4
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group col-lg-6">
+                                        <label>Assessment Tax Paid</label>
                                         <br>
                                         <label class="radio-inline">
                                             <input type="radio" name="pty_ast_paid" id="ast_paid1" value="T" > Yes                                    </label>
@@ -343,7 +421,7 @@ and open the template in the editor.
                                     </div>
 
                                     <div class="form-group col-lg-6">
-                                        <label>Arrears Amount in Assessment Tax <span class="badge" data-toggle="tooltip" data-placement="right" title="Enter minus value if overpaid"><i class="fa fa-info"></i></span></label>
+                                        <label>Arrears Amount in Assessment Tax</label>
                                         <input type="text" name="arrears_ast_tax" id="arrears_ast_tax" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-6">
@@ -362,16 +440,7 @@ and open the template in the editor.
                         <div class="divider20"></div>
                         <div class="form-group col-lg-12">
                             <button type="submit" name="submit" class="btn btn-primary submit-btn"><i class="fa fa-plus"></i> Add</button>
-                            <a href="http://45.76.177.205/properties/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                    </div>
+                            <a href="http://45.76.177.205/la_owned_properties/index" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>                    </div>
                     </div>
                 </form>            </div>
         </div>
-
-
-
-
-
-
-
-    </body>
-</html>

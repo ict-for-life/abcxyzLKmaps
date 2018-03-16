@@ -15,98 +15,6 @@ if ($_SESSION["u_img"] != "") {
     $user_img = $_SESSION["u_img"];
 }
 ?>
-
-<html>
-    <head>
-        <link rel="stylesheet" href="css/vendor.css">
-
-        <link rel="stylesheet" href="css/app-blue.css">
-       
-        <style>
-            .prof_main{
-                position:fixed;
-                top: 50%;
-                left: 50%;
-                width:60%;
-                height:80%;
-                margin: 0 auto;
-                background-color: #F5F5F5;
-                overflow-x: visible;
-                transition: 0.5s;
-                padding-top: 20px; 
-                
-            }
-
-            /*.prof_main table{
-                height:100%;
-                width:80%;
-                
-            }*/
-            .prof_main td,prof_main tr{
-                border:0px solid;
-            }
-            .prof_main_img{
-                height:200px;
-                width:200px;
-
-            }
-            .prof_main_img:hover{
-                background-color: rgba(0,0,0,.5);
-                z-index: 10000;
-                color: #fff;
-                transition: all .3s ease;
-                text-decoration: none;
-                opacity: #010101;
-            }
-            .image-upload > input {
-                visibility:hidden;
-                width:0;
-                height:0
-            }
-
-            body {font-family: Arial, Helvetica, sans-serif;}
-
-            /* The Modal (background) */
-            .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                padding-top: 100px; /* Location of the box */
-                left: 0;
-                top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgb(0,0,0); /* Fallback color */
-                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            }
-
-            /* Modal Content */
-            .modal-content {
-                background-color: #fefefe;
-                margin: auto;
-                padding: 20px;
-                border: 1px solid #888;
-                width: 80%;
-                height: 40%;
-            }
-
-            /* The Close Button */
-            .close {
-                color: #aaaaaa;
-                float: right;
-                font-size: 28px;
-                font-weight: bold;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-            } 
-
-        </style>
         <script>
             function setprof(input) {
 //                alert("awa");
@@ -314,5 +222,4 @@ var newpw=document.getElementById('ConfPassword').value;
             }
 
         </script>               
-    </body>
-</html>
+ 
