@@ -62,7 +62,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                             </a>
                         </li>
                         <li>
-                            <a href="#"> <i class="fa fa-tachometer"></i> Dashboard</a>
+                            <a href="#" onclick="Odash()" <i class="fa fa-tachometer"></i> Dashboard</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-home"></i> Properties <span class="caret"></span></a>
