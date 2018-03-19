@@ -76,7 +76,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                             </ul>
                         </li>
                         <li>
-                            <a href="#"> <i class="fa fa-road"></i> Roads</a>
+                            <a href="#" onclick="Oroads()"> <i class="fa fa-road"></i> Roads</a>
                         </li>
 
                         <li class="dropdown">

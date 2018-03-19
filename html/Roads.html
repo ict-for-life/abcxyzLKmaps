@@ -1,16 +1,30 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>Roads</div>
-    </body>
-</html>
+<div class="col-lg-12"><h3>Roads</h3>
+    <br>
+</div>
+<div id="col-lg-6">
+    <button id="AN" class="btn btn-success" onclick="loadForm()"> Add New </button>
+    <button id="GB" class="btn btn-info disabled" onclick="loadView()"> Go Back</button>
+</div>
+<br>
+<div class="col-lg-12" id="view">
+
+</div>  
+
+<script>
+    function loadForm() {
+        $("#GB").removeClass("btn btn-info disabled");
+        $("#GB").addClass("btn btn-info");
+        $("#AN").removeClass("btn btn-success");
+        $("#AN").addClass("btn btn-success disabled");
+        $("#view").load("resFromOld/Roads.html");
+    }
+    function loadView() {
+        $("#GB").removeClass("btn btn-info");
+        $("#GB").addClass("btn btn-info disabled");
+        $("#AN").removeClass("btn btn-success disabled");
+        $("#AN").addClass("btn btn-success");
+        //$("#view").empty();
+        $("#view").load("html/views/RoadView.html");
+    }
+    $("#view").load("html/views/AboardView.html");
+</script>

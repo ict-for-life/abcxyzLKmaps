@@ -1,3 +1,6 @@
+<div class="col-lg-12"><h3>Dashboard</h3>
+    <br>
+</div>
 <div class="col-lg-6">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -134,6 +137,13 @@
             mapTypeId: google.maps.MapTypeId.HYBRID
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        
+         var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(51.5, -0.12),
+          map: map,
+          title: 'Hello World!'
+        });
+        
     }
     (function () {
         'use strict';
