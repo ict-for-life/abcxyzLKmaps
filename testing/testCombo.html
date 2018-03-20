@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="css/main.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    </head>
+    <body onload="loadProvince()">
+
+        <div class="col-lg-3">
+            <label class="col-md-12 control-label" for="sdistrict">Province</label>
+            <div class="col-md-12">
+                <select id="cb_province" name="sdistrict" class="form-control" onchange="loadLA(this.value);">
+
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <label class="col-md-12 control-label" for="sLA">District</label>
+            <div class="col-md-12">
+                <select id="cb_LA" name="sLA" class="form-control" disabled>
+                    <option value="">Please Select Province</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <label class="col-md-12 control-label" for="sDivision">GN Division</label>
+            <div class="col-md-12">
+                <select id="sDivision" name="sDivision" class="form-control" disabled> 
+                    <option value="">Please Select L.Authorities</option>
+                </select>
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+
+        function  loadProvince() {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var res = this.responseText;
+//                    alert(res);
+                    if (res != "Error") {
+
+                        document.getElementById('cb_province').innerHTML = this.responseText;
+
+                    }
+
+                }
+            };
+            xhttp.open("GET", "../controllers/co_loadCombo.php?type=Province&subType=none", true);
+            xhttp.send();
+
+        }
+
+        function loadLA(x) {
+
+//            alert(x);
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var res = this.responseText;
+//                    alert(res);
+                    if (res != "Error") {
+
+                        document.getElementById('cb_LA').innerHTML = this.responseText;
+                        document.getElementById('cb_LA').disabled=false;
+
+                    }
+
+                }
+            };
+            xhttp.open("GET", "../controllers/co_loadCombo.php?type=District&subType="+x, true);
+            xhttp.send();
+
+        }
+
+    </script>
+
+</html>
