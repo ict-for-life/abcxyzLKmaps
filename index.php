@@ -22,16 +22,20 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
             <meta charset="utf-8">
             <meta name="robots" content="noindex, nofollow">
 
-            <title>Fancy Sidebar Navigation - Bootsnipp.com</title>
+            <title>LKMAPS</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
             <link href="css/main.css" rel="stylesheet">
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script-->
 
-
-
+            
+            
             <script type="text/javascript">
 
                 window.alert = function () {};
@@ -157,7 +161,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                         }
                         function OAB() {
                             $('#loader').load('html/Aboard.html');
-                            
+
                             //document.getElementById("rp").class = "active"
 
                         }
@@ -174,7 +178,7 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
                         function Eprof() {
                             $('#loader').load('php/profile.php');
                         }
-                        
+
                     </script>
                 </nav>
                 <!-- /#sidebar-wrapper -->
