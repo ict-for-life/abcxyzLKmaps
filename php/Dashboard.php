@@ -2,7 +2,7 @@
     <br>
 </div>
 <div class="col-lg-6">
-    <div class="panel panel-primary">
+<!--    <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">New Updates - Found total (3) </h3>
             <div class="pull-right">
@@ -86,6 +86,220 @@
                 </tr>
                 
             </tbody>
+        </table>
+    </div>-->
+    <div class="row">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>User/Time</th>
+                    <th>User Action</th>
+                    <th>Type</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dineth<br>17.2.3-12.36</td>
+                    <td>Add Property</td>
+                    <td>House</td>
+                    <td>
+                        <ul class="nav navbar-nav">
+                            <li><button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                            <li><button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></li>
+                            <li><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>User/Time</th>
+                    <th>User Action</th>
+                    <th>Type</th>
+                    <th>Operation</th>
+                </tr>
+            </tfoot>
         </table>
     </div>
 
