@@ -430,4 +430,53 @@
     }
 </script>
 
+<script>
+
+        function  loadProvince() {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var res = this.responseText;
+//                    alert(res);
+                    if (res != "Error") {
+
+                        document.getElementById('cb_province').innerHTML = this.responseText;
+
+                    }
+
+                }
+            };
+            xhttp.open("GET", "../controllers/co_loadCombo.php?type=Province&subType=none", true);
+            xhttp.send();
+
+        }
+
+        function loadLA(x) {
+
+//            alert(x);
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var res = this.responseText;
+//                    alert(res);
+                    if (res != "Error") {
+
+                        document.getElementById('cb_LA').innerHTML = this.responseText;
+                        document.getElementById('cb_LA').disabled=false;
+
+                    }
+
+                }
+            };
+            xhttp.open("GET", "../controllers/co_loadCombo.php?type=District&subType="+x, true);
+            xhttp.send();
+
+        }
+
+    </script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGaUeM98I8TxwTUk70r4MkP6semapGvsA&callback=myMap"></script>

@@ -37,7 +37,7 @@ if (isset($_GET['type']) && isset($_GET['subType'])) {
 
             if (mysqli_num_rows($result) > 0) {
 
-                $data = "";
+                 $data = "<option>Please Select</option>";
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     $data = $data . "<option value=" . $row["idtb_district"] . ">" . $row["district_name"] . "</option>";
@@ -57,7 +57,7 @@ if (isset($_GET['type']) && isset($_GET['subType'])) {
 
             if (mysqli_num_rows($result) > 0) {
 
-                $data = "";
+                $data = "<option>Please Select</option>";
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     $data = $data . "<option value=" . $row["idtb_DSDivision"] . ">" . $row["DSDivision_name"] . "</option>";
@@ -77,7 +77,7 @@ if (isset($_GET['type']) && isset($_GET['subType'])) {
 
             if (mysqli_num_rows($result) > 0) {
 
-                $data = "";
+               $data = "<option>Please Select</option>";
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     $data = $data . "<option value=" . $row["idtb_localAuthority"] . ">" . $row["localAuthority_name"] . "</option>";
@@ -97,7 +97,7 @@ if (isset($_GET['type']) && isset($_GET['subType'])) {
 
             if (mysqli_num_rows($result) > 0) {
 
-                $data = "";
+               $data = "<option>Please Select</option>";
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     $data = $data . "<option value=" . $row["idtb_ward"] . ">" . $row["ward_name"] . "</option>";
@@ -117,7 +117,7 @@ if (isset($_GET['type']) && isset($_GET['subType'])) {
 
             if (mysqli_num_rows($result) > 0) {
 
-                $data = "";
+                $data = "<option>Please Select</option>";
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     $data = $data . "<option value=" . $row["idtb_GNDivision"] . ">" . $row["GNDivision_name"] . "</option>";
