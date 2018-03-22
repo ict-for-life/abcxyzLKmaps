@@ -35,26 +35,24 @@ if (isset($_SESSION["u_id"]) && $_SESSION["u_id"] != NULL) {
             <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet">
             
             
-            <!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script-->
+         
 
 
 
             <script type="text/javascript">
 
-                window.alert = function () {};
-                var defaultCSS = document.getElementById('bootstrap-css');
-                function changeCSS(css) {
-                    if (css)
-                        $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
-                    else
-                        $('head > link').filter(':first').replaceWith(defaultCSS);
-                }
-                $(document).ready(function () {
-                    var iframe_height = parseInt($('html').height());
-                    window.parent.postMessage(iframe_height, 'https://bootsnipp.com');
-                });
+//                window.alert = function () {};
+//                var defaultCSS = document.getElementById('bootstrap-css');
+//                function changeCSS(css) {
+//                    if (css)
+//                        $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+//                    else
+//                        $('head > link').filter(':first').replaceWith(defaultCSS);
+//                }
+//                $(document).ready(function () {
+//                    var iframe_height = parseInt($('html').height());
+//                    window.parent.postMessage(iframe_height, 'https://bootsnipp.com');
+//                });
             </script>
         </head>
         <body onload="mainfunc()">
